@@ -6,3 +6,7 @@ Capybara.configure do |config|
   config.app_host   = 'http://www.google.com'
 end
 World(Capybara)
+
+Dir["./lib/*.rb"].each {|file|
+  require file
+}
